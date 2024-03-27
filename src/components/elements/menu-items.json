@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_menu_items",
+  "info": {
+    "displayName": "Menu Items",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "itemName": {
+      "type": "string"
+    },
+    "itemLink": {
+      "type": "string"
+    }
+  }
+}

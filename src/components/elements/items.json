@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_items",
+  "info": {
+    "displayName": "Items",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "shortTitle": {
+      "type": "string"
+    },
+    "hoverTitle": {
+      "type": "string"
+    },
+    "hoverDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

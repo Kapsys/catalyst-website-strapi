@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_section_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerlogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "menuItems": {
+      "displayName": "Menu Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.menu-items"
+    },
+    "languagesSwitcher": {
+      "displayName": "Languages Switcher",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.languages-switcher"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    }
+  }
+}

@@ -1,5 +1,84 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ElementsButton extends Schema.Component {
+  collectionName: 'components_elements_buttons';
+  info: {
+    displayName: 'Button';
+    icon: 'filter';
+  };
+  attributes: {
+    buttonName: Attribute.String;
+    buttonLink: Attribute.String;
+  };
+}
+
+export interface ElementsItems extends Schema.Component {
+  collectionName: 'components_elements_items';
+  info: {
+    displayName: 'Items';
+    icon: 'server';
+  };
+  attributes: {
+    image: Attribute.Media;
+    shortTitle: Attribute.String;
+    hoverTitle: Attribute.String;
+    hoverDescription: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface ElementsLanguagesSwitcher extends Schema.Component {
+  collectionName: 'components_elements_languages_switchers';
+  info: {
+    displayName: 'Languages Switcher';
+    icon: 'stack';
+  };
+  attributes: {
+    title: Attribute.String;
+    key: Attribute.String;
+  };
+}
+
+export interface ElementsMenuItems extends Schema.Component {
+  collectionName: 'components_elements_menu_items';
+  info: {
+    displayName: 'Menu Items';
+    icon: 'cube';
+  };
+  attributes: {
+    itemName: Attribute.String;
+    itemLink: Attribute.String;
+  };
+}
+
+export interface ElementsSubMenuItems extends Schema.Component {
+  collectionName: 'components_elements_sub_menu_items';
+  info: {
+    displayName: 'Sub Menu Items';
+    icon: 'grid';
+    description: '';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    items: Attribute.Component<'elements.items', true>;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
+export interface SectionHeader extends Schema.Component {
+  collectionName: 'components_section_headers';
+  info: {
+    displayName: 'Header';
+    description: '';
+  };
+  attributes: {
+    headerlogo: Attribute.Media;
+    menuItems: Attribute.Component<'elements.menu-items', true>;
+    languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -53,6 +132,12 @@ export interface SharedSeo extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'elements.button': ElementsButton;
+      'elements.items': ElementsItems;
+      'elements.languages-switcher': ElementsLanguagesSwitcher;
+      'elements.menu-items': ElementsMenuItems;
+      'elements.sub-menu-items': ElementsSubMenuItems;
+      'section.header': SectionHeader;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_languages_switchers",
+  "info": {
+    "displayName": "Languages Switcher",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    }
+  }
+}
