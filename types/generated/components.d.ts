@@ -12,6 +12,31 @@ export interface ElementsButton extends Schema.Component {
   };
 }
 
+export interface ElementsFooterItems extends Schema.Component {
+  collectionName: 'components_elements_footer_items';
+  info: {
+    displayName: 'Footer Items';
+    icon: 'envelop';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    footerMenuItems: Attribute.Component<'elements.footer-menu-items', true>;
+  };
+}
+
+export interface ElementsFooterMenuItems extends Schema.Component {
+  collectionName: 'components_elements_footer_menu_items';
+  info: {
+    displayName: 'Footer Menu Items';
+    icon: 'layer';
+  };
+  attributes: {
+    itemName: Attribute.String;
+    itemLink: Attribute.String;
+  };
+}
+
 export interface ElementsItems extends Schema.Component {
   collectionName: 'components_elements_items';
   info: {
@@ -62,6 +87,23 @@ export interface ElementsSubMenuItems extends Schema.Component {
     subtitle: Attribute.String;
     items: Attribute.Component<'elements.items', true>;
     button: Attribute.Component<'elements.button'>;
+  };
+}
+
+export interface SectionFooter extends Schema.Component {
+  collectionName: 'components_section_footers';
+  info: {
+    displayName: 'Footer';
+    icon: 'database';
+  };
+  attributes: {
+    footerLogo: Attribute.Media;
+    description: Attribute.Text;
+    footerItems: Attribute.Component<'elements.footer-items', true>;
+    copyrightText: Attribute.String;
+    beforeLogoText: Attribute.String;
+    copyrightLogo: Attribute.Media;
+    footerMenuItems: Attribute.Component<'elements.footer-menu-items', true>;
   };
 }
 
@@ -133,10 +175,13 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'elements.button': ElementsButton;
+      'elements.footer-items': ElementsFooterItems;
+      'elements.footer-menu-items': ElementsFooterMenuItems;
       'elements.items': ElementsItems;
       'elements.languages-switcher': ElementsLanguagesSwitcher;
       'elements.menu-items': ElementsMenuItems;
       'elements.sub-menu-items': ElementsSubMenuItems;
+      'section.footer': SectionFooter;
       'section.header': SectionHeader;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;

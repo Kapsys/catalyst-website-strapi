@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_section_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "footerLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "footerItems": {
+      "displayName": "Footer Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.footer-items"
+    },
+    "copyrightText": {
+      "type": "string"
+    },
+    "beforeLogoText": {
+      "type": "string"
+  },
+  "copyrightLogo": {
+    "allowedTypes": [
+      "images",
+      "files",
+      "videos",
+      "audios"
+    ],
+    "type": "media",
+    "multiple": false
+  },
+  "footerMenuItems": {
+    "displayName": "Footer Menu Items",
+    "type": "component",
+    "repeatable": true,
+    "component": "elements.footer-menu-items"
+  }
+}
+}

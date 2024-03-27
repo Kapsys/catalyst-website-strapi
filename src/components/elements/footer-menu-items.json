@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_footer_menu_items",
+  "info": {
+    "displayName": "Footer Menu Items",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "itemName": {
+      "type": "string"
+    },
+    "itemLink": {
+      "type": "string"
+    }
+  }
+}

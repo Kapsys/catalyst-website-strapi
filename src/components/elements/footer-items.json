@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_footer_items",
+  "info": {
+    "displayName": "Footer Items",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "footerMenuItems": {
+      "displayName": "Footer Menu Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.footer-menu-items"
+    }
+  }
+}
