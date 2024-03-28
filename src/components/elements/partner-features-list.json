@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_partner_features_lists",
+  "info": {
+    "displayName": "Partner Features List",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "partnerFeatureTitle": {
+      "type": "string"
+    },
+    "partnerFeatureDescription": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_partner_steps",
+  "info": {
+    "displayName": "Partner Steps",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "numberStep": {
+      "type": "string"
+    },
+    "descriptionStep": {
+      "type": "string"
+    }
+  }
+}

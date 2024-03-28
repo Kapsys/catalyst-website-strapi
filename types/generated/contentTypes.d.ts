@@ -993,7 +993,9 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    dynamicSections: Attribute.DynamicZone<['section.hero-section', 'section.cta-section']> &
+    dynamicSections: Attribute.DynamicZone<
+      ['section.hero-section', 'section.cta-section', 'section.managing-partner']
+    > &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

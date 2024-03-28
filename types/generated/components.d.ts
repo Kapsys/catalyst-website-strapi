@@ -88,6 +88,32 @@ export interface ElementsMenuItems extends Schema.Component {
   };
 }
 
+export interface ElementsPartnerFeaturesList extends Schema.Component {
+  collectionName: 'components_elements_partner_features_lists';
+  info: {
+    displayName: 'Partner Features List';
+    icon: 'bulletList';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    partnerFeatureTitle: Attribute.String;
+    partnerFeatureDescription: Attribute.Text;
+  };
+}
+
+export interface ElementsPartnerSteps extends Schema.Component {
+  collectionName: 'components_elements_partner_steps';
+  info: {
+    displayName: 'Partner Steps';
+    icon: 'layout';
+    description: '';
+  };
+  attributes: {
+    numberStep: Attribute.String;
+    descriptionStep: Attribute.String;
+  };
+}
+
 export interface ElementsSubMenuItems extends Schema.Component {
   collectionName: 'components_elements_sub_menu_items';
   info: {
@@ -177,6 +203,22 @@ export interface SectionHeroSection extends Schema.Component {
   };
 }
 
+export interface SectionManagingPartner extends Schema.Component {
+  collectionName: 'components_section_managing_partners';
+  info: {
+    displayName: 'Managing Partner';
+    icon: 'pinMap';
+    description: '';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    partnerFeaturesList: Attribute.Component<'elements.partner-features-list', true>;
+    partnerSteps: Attribute.Component<'elements.partner-steps', true>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -237,12 +279,15 @@ declare module '@strapi/types' {
       'elements.items': ElementsItems;
       'elements.languages-switcher': ElementsLanguagesSwitcher;
       'elements.menu-items': ElementsMenuItems;
+      'elements.partner-features-list': ElementsPartnerFeaturesList;
+      'elements.partner-steps': ElementsPartnerSteps;
       'elements.sub-menu-items': ElementsSubMenuItems;
       'elements.subscription-form': ElementsSubscriptionForm;
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
+      'section.managing-partner': SectionManagingPartner;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

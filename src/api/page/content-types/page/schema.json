@@ -36,7 +36,8 @@
       "type": "dynamiczone",
       "components": [
         "section.hero-section",
-        "section.cta-section"
+        "section.cta-section",
+        "section.managing-partner"
       ],
       "pluginOptions": {
         "i18n": {

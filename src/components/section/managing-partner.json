@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_section_managing_partners",
+  "info": {
+    "displayName": "Managing Partner",
+    "icon": "pinMap",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "partnerFeaturesList": {
+      "displayName": "Partner Features List",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.partner-features-list"
+    },
+    "partnerSteps": {
+      "displayName": "Partner Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.partner-steps"
+    }
+  }
+}
