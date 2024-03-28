@@ -928,7 +928,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    header: Attribute.Component<'section.header'>;
+    header: Attribute.Component<'global.header'>;
     submenuItems: Attribute.Component<'elements.sub-menu-items', true>;
     footer: Attribute.Component<'section.footer'>;
     createdAt: Attribute.DateTime;
@@ -948,6 +948,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -955,6 +956,8 @@ export interface ApiPagePage extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     slug: Attribute.String;
+    dynamicSections: Attribute.DynamicZone<['section.hero-section']>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_subscription_forms",
+  "info": {
+    "displayName": "Subscription Form",
+    "icon": "discuss",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subscriptionPlaceholder": {
+      "type": "string"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "privacyPolicyText": {
+      "type": "blocks"
+    }
+  }
+}

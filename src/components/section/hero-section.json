@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_section_hero_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subscriptionForm": {
+      "displayName": "Subscription Form",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.subscription-form"
+    }
+  }
+}

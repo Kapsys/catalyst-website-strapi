@@ -90,8 +90,36 @@ export interface ElementsSubMenuItems extends Schema.Component {
   };
 }
 
+export interface ElementsSubscriptionForm extends Schema.Component {
+  collectionName: 'components_section_subscription_forms';
+  info: {
+    displayName: 'Subscription Form';
+    icon: 'discuss';
+    description: '';
+  };
+  attributes: {
+    subscriptionPlaceholder: Attribute.String;
+    button: Attribute.Component<'elements.button'>;
+    privacyPolicyText: Attribute.Blocks;
+  };
+}
+
+export interface GlobalHeader extends Schema.Component {
+  collectionName: 'components_global_headers';
+  info: {
+    displayName: 'Header';
+    description: '';
+  };
+  attributes: {
+    headerlogo: Attribute.Media;
+    menuItems: Attribute.Component<'elements.menu-items', true>;
+    languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
-  collectionName: 'components_section_footers';
+  collectionName: 'components_global_footers';
   info: {
     displayName: 'Footer';
     icon: 'database';
@@ -107,17 +135,19 @@ export interface SectionFooter extends Schema.Component {
   };
 }
 
-export interface SectionHeader extends Schema.Component {
-  collectionName: 'components_section_headers';
+export interface SectionHeroSection extends Schema.Component {
+  collectionName: 'components_section_hero_sections';
   info: {
-    displayName: 'Header';
+    displayName: 'Hero Section';
+    icon: 'star';
     description: '';
   };
   attributes: {
-    headerlogo: Attribute.Media;
-    menuItems: Attribute.Component<'elements.menu-items', true>;
-    languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
-    button: Attribute.Component<'elements.button'>;
+    subtitle: Attribute.String;
+    title: Attribute.Text;
+    description: Attribute.Text;
+    backgroundImage: Attribute.Media;
+    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
   };
 }
 
@@ -181,8 +211,10 @@ declare module '@strapi/types' {
       'elements.languages-switcher': ElementsLanguagesSwitcher;
       'elements.menu-items': ElementsMenuItems;
       'elements.sub-menu-items': ElementsSubMenuItems;
+      'elements.subscription-form': ElementsSubscriptionForm;
+      'global.header': GlobalHeader;
       'section.footer': SectionFooter;
-      'section.header': SectionHeader;
+      'section.hero-section': SectionHeroSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

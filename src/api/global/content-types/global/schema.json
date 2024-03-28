@@ -16,7 +16,7 @@
       "displayName": "Header",
       "type": "component",
       "repeatable": false,
-      "component": "section.header"
+      "component": "global.header"
     },
     "submenuItems": {
       "type": "component",
