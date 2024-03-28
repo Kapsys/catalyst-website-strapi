@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_section_cta_sections",
+  "info": {
+    "displayName": "CTA Section",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subscriptionForm": {
+      "displayName": "Subscription Form",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.subscription-form"
+    },
+    "featuresList": {
+      "displayName": "Features List",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.features-list"
+    }
+  }
+}

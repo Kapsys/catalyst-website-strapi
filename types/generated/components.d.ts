@@ -12,6 +12,18 @@ export interface ElementsButton extends Schema.Component {
   };
 }
 
+export interface ElementsFeaturesList extends Schema.Component {
+  collectionName: 'components_elements_features_lists';
+  info: {
+    displayName: 'Features List';
+    icon: 'repeat';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    featureTitle: Attribute.String;
+  };
+}
+
 export interface ElementsFooterItems extends Schema.Component {
   collectionName: 'components_elements_footer_items';
   info: {
@@ -118,6 +130,20 @@ export interface GlobalHeader extends Schema.Component {
   };
 }
 
+export interface SectionCtaSection extends Schema.Component {
+  collectionName: 'components_section_cta_sections';
+  info: {
+    displayName: 'CTA Section';
+    icon: 'shoppingCart';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
+    featuresList: Attribute.Component<'elements.features-list', true>;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
   collectionName: 'components_global_footers';
   info: {
@@ -205,6 +231,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'elements.button': ElementsButton;
+      'elements.features-list': ElementsFeaturesList;
       'elements.footer-items': ElementsFooterItems;
       'elements.footer-menu-items': ElementsFooterMenuItems;
       'elements.items': ElementsItems;
@@ -213,6 +240,7 @@ declare module '@strapi/types' {
       'elements.sub-menu-items': ElementsSubMenuItems;
       'elements.subscription-form': ElementsSubscriptionForm;
       'global.header': GlobalHeader;
+      'section.cta-section': SectionCtaSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
       'shared.meta-social': SharedMetaSocial;

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_features_lists",
+  "info": {
+    "displayName": "Features List",
+    "icon": "repeat"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "featureTitle": {
+      "type": "string"
+    }
+  }
+}
