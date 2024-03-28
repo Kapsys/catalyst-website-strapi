@@ -37,7 +37,8 @@
       "components": [
         "section.hero-section",
         "section.cta-section",
-        "section.managing-partner"
+        "section.managing-partner",
+        "section.people-testimonials"
       ],
       "pluginOptions": {
         "i18n": {

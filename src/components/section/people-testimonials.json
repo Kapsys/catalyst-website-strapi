@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_section_people_testimonials",
+  "info": {
+    "displayName": "People Testimonials",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonials"
+    }
+  }
+}

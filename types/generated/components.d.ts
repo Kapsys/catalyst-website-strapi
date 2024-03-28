@@ -142,6 +142,22 @@ export interface ElementsSubscriptionForm extends Schema.Component {
   };
 }
 
+export interface ElementsTestimonials extends Schema.Component {
+  collectionName: 'components_section_testimonials';
+  info: {
+    displayName: 'Testimonials';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    description: Attribute.Text;
+    personPhoto: Attribute.Media;
+    name: Attribute.String;
+    position: Attribute.String;
+    logo: Attribute.Media;
+  };
+}
+
 export interface GlobalHeader extends Schema.Component {
   collectionName: 'components_global_headers';
   info: {
@@ -219,6 +235,17 @@ export interface SectionManagingPartner extends Schema.Component {
   };
 }
 
+export interface SectionPeopleTestimonials extends Schema.Component {
+  collectionName: 'components_section_people_testimonials';
+  info: {
+    displayName: 'People Testimonials';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    testimonials: Attribute.Component<'elements.testimonials', true>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -283,11 +310,13 @@ declare module '@strapi/types' {
       'elements.partner-steps': ElementsPartnerSteps;
       'elements.sub-menu-items': ElementsSubMenuItems;
       'elements.subscription-form': ElementsSubscriptionForm;
+      'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
       'section.managing-partner': SectionManagingPartner;
+      'section.people-testimonials': SectionPeopleTestimonials;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }
