@@ -240,9 +240,11 @@ export interface SectionPeopleTestimonials extends Schema.Component {
   info: {
     displayName: 'People Testimonials';
     icon: 'chartBubble';
+    description: '';
   };
   attributes: {
     testimonials: Attribute.Component<'elements.testimonials', true>;
+    isLightBackground: Attribute.Boolean;
   };
 }
 
