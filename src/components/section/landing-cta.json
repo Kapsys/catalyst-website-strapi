@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_landing_ctas",
+  "info": {
+    "displayName": "Landing CTA",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subscriptionForm": {
+      "displayName": "Subscription Form",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.subscription-form"
+    }
+  }
+}

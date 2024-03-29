@@ -245,6 +245,20 @@ export interface SectionHeroSection extends Schema.Component {
   };
 }
 
+export interface SectionLandingCta extends Schema.Component {
+  collectionName: 'components_section_landing_ctas';
+  info: {
+    displayName: 'Landing CTA';
+    icon: 'landscape';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.Text;
+    description: Attribute.Text;
+    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
+  };
+}
+
 export interface SectionManagingPartner extends Schema.Component {
   collectionName: 'components_section_managing_partners';
   info: {
@@ -345,6 +359,7 @@ declare module '@strapi/types' {
       'section.faq-section': SectionFaqSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
+      'section.landing-cta': SectionLandingCta;
       'section.managing-partner': SectionManagingPartner;
       'section.people-testimonials': SectionPeopleTestimonials;
       'shared.meta-social': SharedMetaSocial;
