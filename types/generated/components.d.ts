@@ -24,6 +24,21 @@ export interface ElementsFaq extends Schema.Component {
   };
 }
 
+export interface ElementsFeatureElements extends Schema.Component {
+  collectionName: 'components_elements_feature_elements';
+  info: {
+    displayName: 'Feature Elements';
+    icon: 'information';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'elements.button'>;
+    image: Attribute.Media;
+  };
+}
+
 export interface ElementsFeaturesList extends Schema.Component {
   collectionName: 'components_elements_features_lists';
   info: {
@@ -212,6 +227,21 @@ export interface SectionFaqSection extends Schema.Component {
   };
 }
 
+export interface SectionFeaturesSection extends Schema.Component {
+  collectionName: 'components_section_features_sections';
+  info: {
+    displayName: 'Features Section';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.Text;
+    description: Attribute.Text;
+    featureElements: Attribute.Component<'elements.feature-elements', true>;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
   collectionName: 'components_global_footers';
   info: {
@@ -343,6 +373,7 @@ declare module '@strapi/types' {
     export interface Components {
       'elements.button': ElementsButton;
       'elements.faq': ElementsFaq;
+      'elements.feature-elements': ElementsFeatureElements;
       'elements.features-list': ElementsFeaturesList;
       'elements.footer-items': ElementsFooterItems;
       'elements.footer-menu-items': ElementsFooterMenuItems;
@@ -357,6 +388,7 @@ declare module '@strapi/types' {
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
       'section.faq-section': SectionFaqSection;
+      'section.features-section': SectionFeaturesSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
       'section.landing-cta': SectionLandingCta;

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_features_sections",
+  "info": {
+    "displayName": "Features Section",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "featureElements": {
+      "displayName": "Feature Elements",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-elements"
+    }
+  }
+}

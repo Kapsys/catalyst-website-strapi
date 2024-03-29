@@ -40,7 +40,8 @@
         "section.managing-partner",
         "section.people-testimonials",
         "section.faq-section",
-        "section.landing-cta"
+        "section.landing-cta",
+        "section.features-section"
       ],
       "pluginOptions": {
         "i18n": {
