@@ -38,7 +38,8 @@
         "section.hero-section",
         "section.cta-section",
         "section.managing-partner",
-        "section.people-testimonials"
+        "section.people-testimonials",
+        "section.faq-section"
       ],
       "pluginOptions": {
         "i18n": {

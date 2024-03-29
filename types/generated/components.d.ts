@@ -12,6 +12,18 @@ export interface ElementsButton extends Schema.Component {
   };
 }
 
+export interface ElementsFaq extends Schema.Component {
+  collectionName: 'components_elements_faqs';
+  info: {
+    displayName: 'Faq';
+    icon: 'apps';
+  };
+  attributes: {
+    faqQuestion: Attribute.Text;
+    faqAnswer: Attribute.Text;
+  };
+}
+
 export interface ElementsFeaturesList extends Schema.Component {
   collectionName: 'components_elements_features_lists';
   info: {
@@ -186,6 +198,20 @@ export interface SectionCtaSection extends Schema.Component {
   };
 }
 
+export interface SectionFaqSection extends Schema.Component {
+  collectionName: 'components_section_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+    icon: 'play';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Blocks;
+    faq: Attribute.Component<'elements.faq', true>;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
   collectionName: 'components_global_footers';
   info: {
@@ -302,6 +328,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'elements.button': ElementsButton;
+      'elements.faq': ElementsFaq;
       'elements.features-list': ElementsFeaturesList;
       'elements.footer-items': ElementsFooterItems;
       'elements.footer-menu-items': ElementsFooterMenuItems;
@@ -315,6 +342,7 @@ declare module '@strapi/types' {
       'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
+      'section.faq-section': SectionFaqSection;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
       'section.managing-partner': SectionManagingPartner;
