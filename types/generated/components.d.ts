@@ -242,6 +242,19 @@ export interface SectionFeaturesSection extends Schema.Component {
   };
 }
 
+export interface SectionFinalCta extends Schema.Component {
+  collectionName: 'components_section_final_ctas';
+  info: {
+    displayName: 'Final CTA';
+    icon: 'server';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
+  };
+}
+
 export interface SectionFooter extends Schema.Component {
   collectionName: 'components_global_footers';
   info: {
@@ -389,6 +402,7 @@ declare module '@strapi/types' {
       'section.cta-section': SectionCtaSection;
       'section.faq-section': SectionFaqSection;
       'section.features-section': SectionFeaturesSection;
+      'section.final-cta': SectionFinalCta;
       'section.footer': SectionFooter;
       'section.hero-section': SectionHeroSection;
       'section.landing-cta': SectionLandingCta;

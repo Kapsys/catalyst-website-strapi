@@ -1001,7 +1001,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.people-testimonials',
         'section.faq-section',
         'section.landing-cta',
-        'section.features-section'
+        'section.features-section',
+        'section.final-cta'
       ]
     > &
       Attribute.SetPluginOptions<{

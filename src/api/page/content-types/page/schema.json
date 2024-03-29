@@ -41,7 +41,8 @@
         "section.people-testimonials",
         "section.faq-section",
         "section.landing-cta",
-        "section.features-section"
+        "section.features-section",
+        "section.final-cta"
       ],
       "pluginOptions": {
         "i18n": {
