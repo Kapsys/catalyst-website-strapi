@@ -88,6 +88,7 @@ export interface ElementsItems extends Schema.Component {
     hoverTitle: Attribute.String;
     hoverDescription: Attribute.String;
     description: Attribute.Text;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
