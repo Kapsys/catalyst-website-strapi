@@ -142,6 +142,19 @@ export interface ElementsPartnerSteps extends Schema.Component {
   };
 }
 
+export interface ElementsSalesboardSection extends Schema.Component {
+  collectionName: 'components_elements_salesboard_sections';
+  info: {
+    displayName: 'Salesboard Section';
+    icon: 'cube';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+  };
+}
+
 export interface ElementsSubMenuItems extends Schema.Component {
   collectionName: 'components_elements_sub_menu_items';
   info: {
@@ -333,6 +346,17 @@ export interface SectionPeopleTestimonials extends Schema.Component {
   };
 }
 
+export interface SectionSalesboardFeaturesSection extends Schema.Component {
+  collectionName: 'components_section_salesboard_features_sections';
+  info: {
+    displayName: 'Salesboard Features Section';
+    icon: 'layer';
+  };
+  attributes: {
+    salesboardSection: Attribute.Component<'elements.salesboard-section', true>;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -397,6 +421,7 @@ declare module '@strapi/types' {
       'elements.menu-items': ElementsMenuItems;
       'elements.partner-features-list': ElementsPartnerFeaturesList;
       'elements.partner-steps': ElementsPartnerSteps;
+      'elements.salesboard-section': ElementsSalesboardSection;
       'elements.sub-menu-items': ElementsSubMenuItems;
       'elements.subscription-form': ElementsSubscriptionForm;
       'elements.testimonials': ElementsTestimonials;
@@ -410,6 +435,7 @@ declare module '@strapi/types' {
       'section.landing-cta': SectionLandingCta;
       'section.managing-partner': SectionManagingPartner;
       'section.people-testimonials': SectionPeopleTestimonials;
+      'section.salesboard-features-section': SectionSalesboardFeaturesSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }

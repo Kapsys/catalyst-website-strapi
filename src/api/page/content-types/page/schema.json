@@ -42,7 +42,8 @@
         "section.faq-section",
         "section.landing-cta",
         "section.features-section",
-        "section.final-cta"
+        "section.final-cta",
+        "section.salesboard-features-section"
       ],
       "pluginOptions": {
         "i18n": {
