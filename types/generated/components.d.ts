@@ -183,6 +183,7 @@ export interface ElementsResourcesList extends Schema.Component {
   attributes: {
     title: Attribute.String;
     resources: Attribute.Component<'elements.resources', true>;
+    button: Attribute.Component<'elements.button', true>;
   };
 }
 
