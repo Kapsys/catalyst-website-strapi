@@ -982,19 +982,56 @@ export interface ApiFormForm extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    fullName: Attribute.String;
-    email: Attribute.Email;
-    telefone: Attribute.String;
-    message: Attribute.Text;
-    button: Attribute.Component<'elements.button'>;
-    recaptchaId: Attribute.String;
+    fullName: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    email: Attribute.Email &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    telefone: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    message: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button: Attribute.Component<'elements.button'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    recaptchaId: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> & Attribute.Private;
     updatedBy: Attribute.Relation<'api::form.form', 'oneToOne', 'admin::user'> & Attribute.Private;
     sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+    localizations: Attribute.Relation<'api::form.form', 'oneToMany', 'api::form.form'>;
+    locale: Attribute.String;
   };
 }
 
