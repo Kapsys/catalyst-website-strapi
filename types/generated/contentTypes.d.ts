@@ -916,6 +916,32 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiFaqSectionFaqSection extends Schema.SingleType {
+  collectionName: 'faq_sections';
+  info: {
+    singularName: 'faq-section';
+    pluralName: 'faq-sections';
+    displayName: 'FAQ Section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    faq: Attribute.Component<'elements.faq'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq-section.faq-section', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq-section.faq-section', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiFormForm extends Schema.CollectionType {
   collectionName: 'forms';
   info: {
@@ -1026,7 +1052,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.cta-section',
         'section.managing-partner',
         'section.people-testimonials',
-        'section.faq-section',
         'section.landing-cta',
         'section.features-section',
         'section.final-cta',
@@ -1120,6 +1145,7 @@ declare module '@strapi/types' {
       'plugin::sitemap.sitemap': PluginSitemapSitemap;
       'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::form.form': ApiFormForm;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;

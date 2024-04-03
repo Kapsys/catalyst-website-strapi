@@ -258,20 +258,6 @@ export interface SectionEntryPricingSection extends Schema.Component {
   };
 }
 
-export interface SectionFaqSection extends Schema.Component {
-  collectionName: 'components_section_faq_sections';
-  info: {
-    displayName: 'FAQ Section';
-    icon: 'play';
-  };
-  attributes: {
-    subtitle: Attribute.String;
-    title: Attribute.String;
-    description: Attribute.Blocks;
-    faq: Attribute.Component<'elements.faq', true>;
-  };
-}
-
 export interface SectionFeaturesSection extends Schema.Component {
   collectionName: 'components_section_features_sections';
   info: {
@@ -460,7 +446,6 @@ declare module '@strapi/types' {
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
       'section.entry-pricing-section': SectionEntryPricingSection;
-      'section.faq-section': SectionFaqSection;
       'section.features-section': SectionFeaturesSection;
       'section.final-cta': SectionFinalCta;
       'section.footer': SectionFooter;
