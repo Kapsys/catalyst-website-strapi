@@ -265,7 +265,7 @@ export interface GlobalHeader extends Schema.Component {
     menuItems: Attribute.Component<'elements.menu-items', true>;
     languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
     button: Attribute.Component<'elements.button'>;
-    languageNotification: Attribute.Component<'elements.language-notification'>;
+    languageNotification: Attribute.Component<'elements.language-notification', true>;
   };
 }
 

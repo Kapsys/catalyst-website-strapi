@@ -38,7 +38,7 @@
     "languageNotification": {
       "displayName": "Language Notification",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "elements.language-notification"
     }
   }
