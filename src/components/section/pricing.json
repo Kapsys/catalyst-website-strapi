@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_section_pricings",
+  "info": {
+    "displayName": "Pricing",
+    "icon": "hashtag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pricingPlan": {
+      "displayName": "Pricing Plan",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.pricing-plan"
+    }
+  }
+}

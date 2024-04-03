@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_resources",
+  "info": {
+    "displayName": "Resources",
+    "icon": "rotate"
+  },
+  "options": {},
+  "attributes": {
+    "resourceName": {
+      "type": "string"
+    }
+  }
+}

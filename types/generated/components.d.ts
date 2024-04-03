@@ -156,6 +156,47 @@ export interface ElementsPartnerSteps extends Schema.Component {
   };
 }
 
+export interface ElementsPricingPlan extends Schema.Component {
+  collectionName: 'components_elements_pricing_plans';
+  info: {
+    displayName: 'Pricing Plan';
+    icon: 'manyToMany';
+    description: '';
+  };
+  attributes: {
+    pricingIcon: Attribute.Media;
+    pricingChoicePlan: Attribute.String;
+    price: Attribute.String;
+    pricingPeriod: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'elements.button', true>;
+    resourcesList: Attribute.Component<'elements.resources-list', true>;
+  };
+}
+
+export interface ElementsResourcesList extends Schema.Component {
+  collectionName: 'components_elements_resources_lists';
+  info: {
+    displayName: 'Resources List';
+    icon: 'code';
+  };
+  attributes: {
+    title: Attribute.String;
+    resources: Attribute.Component<'elements.resources', true>;
+  };
+}
+
+export interface ElementsResources extends Schema.Component {
+  collectionName: 'components_elements_resources';
+  info: {
+    displayName: 'Resources';
+    icon: 'rotate';
+  };
+  attributes: {
+    resourceName: Attribute.String;
+  };
+}
+
 export interface ElementsSalesboardSection extends Schema.Component {
   collectionName: 'components_elements_salesboard_sections';
   info: {
@@ -363,6 +404,18 @@ export interface SectionPeopleTestimonials extends Schema.Component {
   };
 }
 
+export interface SectionPricing extends Schema.Component {
+  collectionName: 'components_section_pricings';
+  info: {
+    displayName: 'Pricing';
+    icon: 'hashtag';
+    description: '';
+  };
+  attributes: {
+    pricingPlan: Attribute.Component<'elements.pricing-plan'>;
+  };
+}
+
 export interface SectionSalesboardFeaturesSection extends Schema.Component {
   collectionName: 'components_section_salesboard_features_sections';
   info: {
@@ -439,6 +492,9 @@ declare module '@strapi/types' {
       'elements.menu-items': ElementsMenuItems;
       'elements.partner-features-list': ElementsPartnerFeaturesList;
       'elements.partner-steps': ElementsPartnerSteps;
+      'elements.pricing-plan': ElementsPricingPlan;
+      'elements.resources-list': ElementsResourcesList;
+      'elements.resources': ElementsResources;
       'elements.salesboard-section': ElementsSalesboardSection;
       'elements.sub-menu-items': ElementsSubMenuItems;
       'elements.subscription-form': ElementsSubscriptionForm;
@@ -453,6 +509,7 @@ declare module '@strapi/types' {
       'section.landing-cta': SectionLandingCta;
       'section.managing-partner': SectionManagingPartner;
       'section.people-testimonials': SectionPeopleTestimonials;
+      'section.pricing': SectionPricing;
       'section.salesboard-features-section': SectionSalesboardFeaturesSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;

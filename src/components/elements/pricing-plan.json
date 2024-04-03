@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_elements_pricing_plans",
+  "info": {
+    "displayName": "Pricing Plan",
+    "icon": "manyToMany",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pricingIcon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pricingChoicePlan": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "pricingPeriod": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.button"
+    },
+    "resourcesList": {
+      "displayName": "Resources List",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.resources-list"
+    }
+  }
+}

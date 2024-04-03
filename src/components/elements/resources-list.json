@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_resources_lists",
+  "info": {
+    "displayName": "Resources List",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "resources": {
+      "displayName": "Resources",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.resources"
+    }
+  }
+}
