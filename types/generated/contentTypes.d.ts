@@ -922,15 +922,41 @@ export interface ApiFaqSectionFaqSection extends Schema.SingleType {
     singularName: 'faq-section';
     pluralName: 'faq-sections';
     displayName: 'FAQ Section';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    subtitle: Attribute.String;
-    title: Attribute.String;
-    description: Attribute.Text;
-    faq: Attribute.Component<'elements.faq'>;
+    subtitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    faq: Attribute.Component<'elements.faq', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Blocks &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -939,6 +965,12 @@ export interface ApiFaqSectionFaqSection extends Schema.SingleType {
     updatedBy: Attribute.Relation<'api::faq-section.faq-section', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+    localizations: Attribute.Relation<
+      'api::faq-section.faq-section',
+      'oneToMany',
+      'api::faq-section.faq-section'
+    >;
+    locale: Attribute.String;
   };
 }
 
