@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_entry_pricing_sections",
+  "info": {
+    "displayName": "Entry Pricing Section",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "monthlyPricingText": {
+      "type": "string"
+    },
+    "yearlyPricingText": {
+      "type": "string"
+    }
+  }
+}

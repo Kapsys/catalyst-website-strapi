@@ -242,6 +242,22 @@ export interface SectionCtaSection extends Schema.Component {
   };
 }
 
+export interface SectionEntryPricingSection extends Schema.Component {
+  collectionName: 'components_section_entry_pricing_sections';
+  info: {
+    displayName: 'Entry Pricing Section';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.Text;
+    description: Attribute.Text;
+    monthlyPricingText: Attribute.String;
+    yearlyPricingText: Attribute.String;
+  };
+}
+
 export interface SectionFaqSection extends Schema.Component {
   collectionName: 'components_section_faq_sections';
   info: {
@@ -443,6 +459,7 @@ declare module '@strapi/types' {
       'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
       'section.cta-section': SectionCtaSection;
+      'section.entry-pricing-section': SectionEntryPricingSection;
       'section.faq-section': SectionFaqSection;
       'section.features-section': SectionFeaturesSection;
       'section.final-cta': SectionFinalCta;
