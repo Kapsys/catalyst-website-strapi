@@ -92,6 +92,20 @@ export interface ElementsItems extends Schema.Component {
   };
 }
 
+export interface ElementsLanguageNotification extends Schema.Component {
+  collectionName: 'components_elements_language_notifications';
+  info: {
+    displayName: 'Language Notification';
+    icon: 'repeat';
+  };
+  attributes: {
+    description: Attribute.Text;
+    langKey: Attribute.String;
+    title: Attribute.String;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
 export interface ElementsLanguagesSwitcher extends Schema.Component {
   collectionName: 'components_elements_languages_switchers';
   info: {
@@ -210,6 +224,7 @@ export interface GlobalHeader extends Schema.Component {
     menuItems: Attribute.Component<'elements.menu-items', true>;
     languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
     button: Attribute.Component<'elements.button'>;
+    languageNotification: Attribute.Component<'elements.language-notification'>;
   };
 }
 
@@ -417,6 +432,7 @@ declare module '@strapi/types' {
       'elements.footer-items': ElementsFooterItems;
       'elements.footer-menu-items': ElementsFooterMenuItems;
       'elements.items': ElementsItems;
+      'elements.language-notification': ElementsLanguageNotification;
       'elements.languages-switcher': ElementsLanguagesSwitcher;
       'elements.menu-items': ElementsMenuItems;
       'elements.partner-features-list': ElementsPartnerFeaturesList;

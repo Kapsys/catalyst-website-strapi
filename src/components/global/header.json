@@ -34,6 +34,12 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.button"
+    },
+    "languageNotification": {
+      "displayName": "Language Notification",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.language-notification"
     }
   }
 }
