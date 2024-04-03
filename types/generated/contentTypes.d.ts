@@ -1056,7 +1056,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.features-section',
         'section.final-cta',
         'section.salesboard-features-section',
-        'section.entry-pricing-section'
+        'section.entry-pricing-section',
+        'section.pricing'
       ]
     > &
       Attribute.SetPluginOptions<{
