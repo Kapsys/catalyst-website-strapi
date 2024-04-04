@@ -42,7 +42,7 @@
         }
       }
     },
-    "description": {
+    "descriptionRB": {
       "pluginOptions": {
         "i18n": {
           "localized": true
