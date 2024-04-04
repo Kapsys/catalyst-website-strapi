@@ -358,7 +358,6 @@ export interface SectionHeroSection extends Schema.Component {
     title: Attribute.Text;
     description: Attribute.Text;
     backgroundImage: Attribute.Media;
-    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
   };
 }
 

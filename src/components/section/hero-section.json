@@ -26,12 +26,6 @@
         "videos",
         "audios"
       ]
-    },
-    "subscriptionForm": {
-      "displayName": "Subscription Form",
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.subscription-form"
     }
   }
 }
