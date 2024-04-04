@@ -358,6 +358,7 @@ export interface SectionHeroSection extends Schema.Component {
     title: Attribute.Text;
     description: Attribute.Text;
     backgroundImage: Attribute.Media;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
