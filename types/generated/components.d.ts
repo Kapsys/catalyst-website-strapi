@@ -228,14 +228,12 @@ export interface ElementsSubMenuItems extends Schema.Component {
 export interface ElementsSubscriptionForm extends Schema.Component {
   collectionName: 'components_section_subscription_forms';
   info: {
-    displayName: 'Subscription Form';
+    displayName: 'Demo Button';
     icon: 'discuss';
     description: '';
   };
   attributes: {
-    subscriptionPlaceholder: Attribute.String;
     button: Attribute.Component<'elements.button'>;
-    privacyPolicyText: Attribute.Blocks;
   };
 }
 
