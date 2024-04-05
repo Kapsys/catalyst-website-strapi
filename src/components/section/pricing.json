@@ -10,7 +10,7 @@
     "pricingPlan": {
       "displayName": "Pricing Plan",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "elements.pricing-plan"
     }
   }

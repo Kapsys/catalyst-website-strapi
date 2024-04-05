@@ -413,7 +413,7 @@ export interface SectionPricing extends Schema.Component {
     description: '';
   };
   attributes: {
-    pricingPlan: Attribute.Component<'elements.pricing-plan'>;
+    pricingPlan: Attribute.Component<'elements.pricing-plan', true>;
   };
 }
 
