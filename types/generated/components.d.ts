@@ -273,11 +273,11 @@ export interface SectionCtaSection extends Schema.Component {
   info: {
     displayName: 'CTA Section';
     icon: 'shoppingCart';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
     featuresList: Attribute.Component<'elements.features-list', true>;
   };
 }
@@ -318,11 +318,11 @@ export interface SectionFinalCta extends Schema.Component {
   info: {
     displayName: 'Final CTA';
     icon: 'server';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
   };
 }
 
@@ -365,12 +365,12 @@ export interface SectionLandingCta extends Schema.Component {
   info: {
     displayName: 'Landing CTA';
     icon: 'landscape';
+    description: '';
   };
   attributes: {
     subtitle: Attribute.String;
     title: Attribute.Text;
     description: Attribute.Text;
-    subscriptionForm: Attribute.Component<'elements.subscription-form'>;
   };
 }
 

@@ -2,7 +2,8 @@
   "collectionName": "components_section_final_ctas",
   "info": {
     "displayName": "Final CTA",
-    "icon": "server"
+    "icon": "server",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,12 +12,6 @@
     },
     "description": {
       "type": "text"
-    },
-    "subscriptionForm": {
-      "displayName": "Subscription Form",
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.subscription-form"
     }
   }
 }
