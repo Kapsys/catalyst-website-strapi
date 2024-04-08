@@ -166,7 +166,8 @@ export interface ElementsPricingPlan extends Schema.Component {
   attributes: {
     pricingIcon: Attribute.Media;
     pricingChoicePlan: Attribute.String;
-    price: Attribute.String;
+    monthlyPrice: Attribute.String;
+    yearlyPrice: Attribute.String;
     pricingPeriod: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'elements.button', true>;

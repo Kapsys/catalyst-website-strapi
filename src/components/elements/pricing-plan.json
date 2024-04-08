@@ -21,7 +21,10 @@
     "pricingChoicePlan": {
       "type": "string"
     },
-    "price": {
+    "monthlyPrice": {
+      "type": "string"
+    },
+    "yearlyPrice": {
       "type": "string"
     },
     "pricingPeriod": {
