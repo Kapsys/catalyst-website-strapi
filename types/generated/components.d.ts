@@ -296,6 +296,7 @@ export interface SectionEntryPricingSection extends Schema.Component {
     description: Attribute.Text;
     monthlyPricingText: Attribute.String;
     yearlyPricingText: Attribute.String;
+    pricingPlan: Attribute.Component<'elements.pricing-plan', true>;
   };
 }
 
