@@ -279,6 +279,7 @@ export interface SectionCtaSection extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     featuresList: Attribute.Component<'elements.features-list', true>;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
@@ -323,6 +324,7 @@ export interface SectionFinalCta extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
@@ -371,6 +373,7 @@ export interface SectionLandingCta extends Schema.Component {
     subtitle: Attribute.String;
     title: Attribute.Text;
     description: Attribute.Text;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
