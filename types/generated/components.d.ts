@@ -204,11 +204,13 @@ export interface ElementsSalesboardSection extends Schema.Component {
   info: {
     displayName: 'Salesboard Section';
     icon: 'cube';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     image: Attribute.Media;
+    mobileImage: Attribute.Media;
   };
 }
 
