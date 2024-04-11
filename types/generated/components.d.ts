@@ -12,6 +12,20 @@ export interface ElementsButton extends Schema.Component {
   };
 }
 
+export interface ElementsContent extends Schema.Component {
+  collectionName: 'components_elements_contents';
+  info: {
+    displayName: 'Content';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
 export interface ElementsFaq extends Schema.Component {
   collectionName: 'components_elements_faqs';
   info: {
@@ -422,6 +436,21 @@ export interface SectionPricing extends Schema.Component {
   };
 }
 
+export interface SectionPrivacyPolicy extends Schema.Component {
+  collectionName: 'components_section_privacy_policies';
+  info: {
+    displayName: 'Privacy Policy';
+    icon: 'message';
+    description: '';
+  };
+  attributes: {
+    subtitle: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    content: Attribute.Component<'elements.content'>;
+  };
+}
+
 export interface SectionSalesboardFeaturesSection extends Schema.Component {
   collectionName: 'components_section_salesboard_features_sections';
   info: {
@@ -487,6 +516,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'elements.button': ElementsButton;
+      'elements.content': ElementsContent;
       'elements.faq': ElementsFaq;
       'elements.feature-elements': ElementsFeatureElements;
       'elements.features-list': ElementsFeaturesList;
@@ -516,6 +546,7 @@ declare module '@strapi/types' {
       'section.managing-partner': SectionManagingPartner;
       'section.people-testimonials': SectionPeopleTestimonials;
       'section.pricing': SectionPricing;
+      'section.privacy-policy': SectionPrivacyPolicy;
       'section.salesboard-features-section': SectionSalesboardFeaturesSection;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
