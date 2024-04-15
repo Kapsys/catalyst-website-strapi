@@ -19,7 +19,7 @@
     "content": {
       "displayName": "Content",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "elements.content"
     }
   }

@@ -447,7 +447,7 @@ export interface SectionPrivacyPolicy extends Schema.Component {
     subtitle: Attribute.String;
     title: Attribute.String;
     description: Attribute.Text;
-    content: Attribute.Component<'elements.content'>;
+    content: Attribute.Component<'elements.content', true>;
   };
 }
 
