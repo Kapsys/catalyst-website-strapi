@@ -22,7 +22,7 @@ export interface ElementsContent extends Schema.Component {
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.String;
-    description: Attribute.RichText;
+    description: Attribute.Blocks;
   };
 }
 
