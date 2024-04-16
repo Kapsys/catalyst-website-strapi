@@ -225,6 +225,7 @@ export interface ElementsSalesboardSection extends Schema.Component {
     description: Attribute.Text;
     image: Attribute.Media;
     mobileImage: Attribute.Media;
+    subtitle: Attribute.String;
   };
 }
 
