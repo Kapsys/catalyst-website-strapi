@@ -13,8 +13,8 @@
     "subtitle": {
       "type": "string"
     },
-    "descriptionNew": {
-      "type": "string"
+    "contentDescription": {
+      "type": "blocks"
     }
   }
 }
