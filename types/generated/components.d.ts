@@ -298,6 +298,9 @@ export interface SectionContactUs extends Schema.Component {
     subtitle: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'elements.button'>;
+    privacyText: Attribute.Text;
+    privacyLink: Attribute.Text;
+    privacyUrl: Attribute.Text;
   };
 }
 

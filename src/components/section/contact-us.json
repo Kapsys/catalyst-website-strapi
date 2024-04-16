@@ -20,6 +20,15 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.button"
+    },
+    "privacyText": {
+      "type": "text"
+    },
+    "privacyLink": {
+      "type": "text"
+    },
+    "privacyUrl": {
+      "type": "text"
     }
   }
 }
