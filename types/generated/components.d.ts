@@ -285,6 +285,21 @@ export interface GlobalHeader extends Schema.Component {
   };
 }
 
+export interface SectionContactUs extends Schema.Component {
+  collectionName: 'components_section_contact_uses';
+  info: {
+    displayName: 'Contact Us';
+    icon: 'envelop';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+    privacyText: Attribute.Blocks;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
 export interface SectionCtaSection extends Schema.Component {
   collectionName: 'components_section_cta_sections';
   info: {
@@ -536,6 +551,7 @@ declare module '@strapi/types' {
       'elements.subscription-form': ElementsSubscriptionForm;
       'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
+      'section.contact-us': SectionContactUs;
       'section.cta-section': SectionCtaSection;
       'section.entry-pricing-section': SectionEntryPricingSection;
       'section.features-section': SectionFeaturesSection;

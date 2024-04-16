@@ -45,7 +45,8 @@
         "section.salesboard-features-section",
         "section.entry-pricing-section",
         "section.pricing",
-        "section.privacy-policy"
+        "section.privacy-policy",
+        "section.contact-us"
       ],
       "pluginOptions": {
         "i18n": {

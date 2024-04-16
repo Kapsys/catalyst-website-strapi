@@ -1127,7 +1127,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.salesboard-features-section',
         'section.entry-pricing-section',
         'section.pricing',
-        'section.privacy-policy'
+        'section.privacy-policy',
+        'section.contact-us'
       ]
     > &
       Attribute.SetPluginOptions<{
