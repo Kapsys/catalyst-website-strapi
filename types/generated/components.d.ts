@@ -291,12 +291,12 @@ export interface SectionContactUs extends Schema.Component {
   info: {
     displayName: 'Contact Us';
     icon: 'envelop';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.String;
     description: Attribute.Text;
-    privacyText: Attribute.Blocks;
     button: Attribute.Component<'elements.button'>;
   };
 }
