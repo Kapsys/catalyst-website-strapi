@@ -12,9 +12,6 @@
     },
     "subtitle": {
       "type": "string"
-    },
-    "contentDescription": {
-      "type": "blocks"
     }
   }
 }
