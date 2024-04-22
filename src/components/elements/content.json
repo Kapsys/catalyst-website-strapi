@@ -12,6 +12,13 @@
     },
     "subtitle": {
       "type": "string"
+    },
+    "contentDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

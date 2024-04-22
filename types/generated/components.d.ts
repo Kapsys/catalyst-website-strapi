@@ -22,6 +22,13 @@ export interface ElementsContent extends Schema.Component {
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.String;
+    contentDescription: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
   };
 }
 
