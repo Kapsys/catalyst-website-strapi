@@ -31,6 +31,9 @@
     "beforeLogoText": {
       "type": "string"
   },
+    "logoUrl": {
+      "type": "string"
+    },
   "copyrightLogo": {
     "allowedTypes": [
       "images",

@@ -383,6 +383,7 @@ export interface SectionFooter extends Schema.Component {
     footerItems: Attribute.Component<'elements.footer-items', true>;
     copyrightText: Attribute.String;
     beforeLogoText: Attribute.String;
+    logoUrl: Attribute.String;
     copyrightLogo: Attribute.Media;
     footerMenuItems: Attribute.Component<'elements.footer-menu-items', true>;
     button: Attribute.Component<'elements.button'>;
