@@ -2,21 +2,26 @@
   "collectionName": "components_elements_resource_supporting_texts",
   "info": {
     "displayName": "Resource Supporting Text",
-    "icon": "repeat"
+    "icon": "repeat",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "logoText": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "text": {
+    "monthlytext": {
+      "type": "string"
+    },
+    "yearlytext": {
       "type": "string"
     }
   }

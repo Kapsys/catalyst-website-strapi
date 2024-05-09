@@ -214,10 +214,12 @@ export interface ElementsResourceSupportingText extends Schema.Component {
   info: {
     displayName: 'Resource Supporting Text';
     icon: 'repeat';
+    description: '';
   };
   attributes: {
     logoText: Attribute.Media;
-    text: Attribute.String;
+    monthlytext: Attribute.String;
+    yearlytext: Attribute.String;
   };
 }
 
