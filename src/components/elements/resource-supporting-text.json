@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_resource_supporting_texts",
+  "info": {
+    "displayName": "Resource Supporting Text",
+    "icon": "repeat"
+  },
+  "options": {},
+  "attributes": {
+    "logoText": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1126,7 +1126,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'section.final-cta',
         'section.salesboard-features-section',
         'section.entry-pricing-section',
-        'section.pricing',
         'section.privacy-policy',
         'section.contact-us'
       ]

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_pricing_tabs",
+  "info": {
+    "displayName": "Pricing Tabs",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "monthlytext": {
+      "type": "string"
+    },
+    "pricingPlan": {
+      "displayName": "Pricing",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pricing-plan"
+    }
+  }
+}

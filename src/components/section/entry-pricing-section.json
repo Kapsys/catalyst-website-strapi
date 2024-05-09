@@ -21,12 +21,12 @@
     },
     "yearlyPricingText": {
       "type": "string"
-    }, 
-    "pricingPlan": {
-      "displayName": "Pricing Plan",
+    },
+    "pricing": {
+      "displayName": "Pricing",
       "type": "component",
       "repeatable": true,
-      "component": "elements.pricing-plan"
+      "component": "section.pricing"
     }
   }
 }

@@ -2,23 +2,27 @@
   "collectionName": "components_elements_resources_lists",
   "info": {
     "displayName": "Resources List",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "resources": {
       "displayName": "Resources",
       "type": "component",
       "repeatable": true,
       "component": "elements.resources"
     },
+    "resourcesSupportingText": {
+      "displayName": "Resource Supporting Text",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.resource-supporting-text"
+    },
     "button": {
       "displayName": "Button",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "elements.button"
     }
   }

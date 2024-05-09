@@ -190,8 +190,33 @@ export interface ElementsPricingPlan extends Schema.Component {
     yearlyPrice: Attribute.String;
     pricingPeriod: Attribute.String;
     description: Attribute.Text;
-    button: Attribute.Component<'elements.button', true>;
-    resourcesList: Attribute.Component<'elements.resources-list', true>;
+    resources: Attribute.Component<'elements.resources', true>;
+    resourcesSupportingText: Attribute.Component<'elements.resource-supporting-text'>;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
+export interface ElementsPricingTabs extends Schema.Component {
+  collectionName: 'components_elements_pricing_tabs';
+  info: {
+    displayName: 'Pricing Tabs';
+    icon: 'dashboard';
+  };
+  attributes: {
+    monthlytext: Attribute.String;
+    pricingPlan: Attribute.Component<'elements.pricing-plan', true>;
+  };
+}
+
+export interface ElementsResourceSupportingText extends Schema.Component {
+  collectionName: 'components_elements_resource_supporting_texts';
+  info: {
+    displayName: 'Resource Supporting Text';
+    icon: 'repeat';
+  };
+  attributes: {
+    logoText: Attribute.Media;
+    text: Attribute.String;
   };
 }
 
@@ -200,11 +225,12 @@ export interface ElementsResourcesList extends Schema.Component {
   info: {
     displayName: 'Resources List';
     icon: 'code';
+    description: '';
   };
   attributes: {
-    title: Attribute.String;
     resources: Attribute.Component<'elements.resources', true>;
-    button: Attribute.Component<'elements.button', true>;
+    resourcesSupportingText: Attribute.Component<'elements.resource-supporting-text'>;
+    button: Attribute.Component<'elements.button'>;
   };
 }
 
@@ -338,7 +364,7 @@ export interface SectionEntryPricingSection extends Schema.Component {
     description: Attribute.Text;
     monthlyPricingText: Attribute.String;
     yearlyPricingText: Attribute.String;
-    pricingPlan: Attribute.Component<'elements.pricing-plan', true>;
+    pricing: Attribute.Component<'section.pricing', true>;
   };
 }
 
@@ -458,7 +484,7 @@ export interface SectionPricing extends Schema.Component {
     description: '';
   };
   attributes: {
-    pricingPlan: Attribute.Component<'elements.pricing-plan', true>;
+    pricingTabs: Attribute.Component<'elements.pricing-tabs', true>;
   };
 }
 
@@ -556,6 +582,8 @@ declare module '@strapi/types' {
       'elements.partner-features-list': ElementsPartnerFeaturesList;
       'elements.partner-steps': ElementsPartnerSteps;
       'elements.pricing-plan': ElementsPricingPlan;
+      'elements.pricing-tabs': ElementsPricingTabs;
+      'elements.resource-supporting-text': ElementsResourceSupportingText;
       'elements.resources-list': ElementsResourcesList;
       'elements.resources': ElementsResources;
       'elements.salesboard-section': ElementsSalesboardSection;

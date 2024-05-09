@@ -7,11 +7,11 @@
   },
   "options": {},
   "attributes": {
-    "pricingPlan": {
-      "displayName": "Pricing Plan",
+    "pricingTabs": {
+      "displayName": "Pricing Tabs",
       "type": "component",
       "repeatable": true,
-      "component": "elements.pricing-plan"
+      "component": "elements.pricing-tabs"
     }
   }
 }

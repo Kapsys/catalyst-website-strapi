@@ -33,17 +33,23 @@
     "description": {
       "type": "text"
     },
+    "resources": {
+      "displayName": "Resources",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.resources"
+    },
+    "resourcesSupportingText": {
+      "displayName": "Resource Supporting Text",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.resource-supporting-text"
+    },
     "button": {
       "displayName": "Button",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "elements.button"
-    },
-    "resourcesList": {
-      "displayName": "Resources List",
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.resources-list"
     }
   }
 }
