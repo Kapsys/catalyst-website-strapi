@@ -27,7 +27,10 @@
     "yearlyPrice": {
       "type": "string"
     },
-    "pricingPeriod": {
+    "pricingPeriodMonthly": {
+      "type": "string"
+    },
+    "pricingPeriodYearly": {
       "type": "string"
     },
     "description": {

@@ -188,7 +188,8 @@ export interface ElementsPricingPlan extends Schema.Component {
     pricingChoicePlan: Attribute.String;
     monthlyPrice: Attribute.String;
     yearlyPrice: Attribute.String;
-    pricingPeriod: Attribute.String;
+    pricingPeriodMonthly: Attribute.String;
+    pricingPeriodYearly: Attribute.String;
     description: Attribute.Text;
     resources: Attribute.Component<'elements.resources', true>;
     resourcesSupportingText: Attribute.Component<'elements.resource-supporting-text'>;
@@ -364,7 +365,7 @@ export interface SectionEntryPricingSection extends Schema.Component {
     description: Attribute.Text;
     monthlyPricingText: Attribute.String;
     yearlyPricingText: Attribute.String;
-    pricing: Attribute.Component<'section.pricing', true>;
+    pricingTabs: Attribute.Component<'elements.pricing-tabs', true>;
   };
 }
 

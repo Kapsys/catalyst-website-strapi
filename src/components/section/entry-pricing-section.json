@@ -22,11 +22,11 @@
     "yearlyPricingText": {
       "type": "string"
     },
-    "pricing": {
-      "displayName": "Pricing",
+    "pricingTabs": {
+      "displayName": "Pricing Tabs",
       "type": "component",
       "repeatable": true,
-      "component": "section.pricing"
+      "component": "elements.pricing-tabs"
     }
   }
 }
