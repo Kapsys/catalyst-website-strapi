@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_subscription_durations",
+  "info": {
+    "displayName": "Subscription Duration",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

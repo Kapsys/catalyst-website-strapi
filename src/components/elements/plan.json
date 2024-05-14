@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_plans",
+  "info": {
+    "displayName": "Plan",
+    "icon": "manyWays"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

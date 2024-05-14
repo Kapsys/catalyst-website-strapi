@@ -29,6 +29,40 @@
     },
     "privacyUrl": {
       "type": "text"
+    },
+    "plan": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.plan"
+    },
+    "billingTypeMonthly": {
+      "type": "string"
+    },
+    "billingTypeYearly": {
+      "type": "string"
+    },
+    "subscriptionDuration": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.subscription-duration"
+    },
+    "hintText": {
+      "type": "string"
+    },
+    "toggleText": {
+      "type": "string"
+    },
+    "priceTitle": {
+      "type": "string"
+    },
+    "priceDescription": {
+      "type": "text"
+    },
+    "pricePlan": {
+      "type": "string"
+    },
+    "billingType": {
+      "type": "string"
     }
   }
 }

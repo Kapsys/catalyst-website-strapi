@@ -176,6 +176,17 @@ export interface ElementsPartnerSteps extends Schema.Component {
   };
 }
 
+export interface ElementsPlan extends Schema.Component {
+  collectionName: 'components_elements_plans';
+  info: {
+    displayName: 'Plan';
+    icon: 'manyWays';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
 export interface ElementsPricingPlan extends Schema.Component {
   collectionName: 'components_elements_pricing_plans';
   info: {
@@ -278,6 +289,17 @@ export interface ElementsSubMenuItems extends Schema.Component {
   };
 }
 
+export interface ElementsSubscriptionDuration extends Schema.Component {
+  collectionName: 'components_elements_subscription_durations';
+  info: {
+    displayName: 'Subscription Duration';
+    icon: 'stack';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
 export interface ElementsSubscriptionForm extends Schema.Component {
   collectionName: 'components_section_subscription_forms';
   info: {
@@ -336,6 +358,16 @@ export interface SectionContactUs extends Schema.Component {
     privacyText: Attribute.Text;
     privacyLink: Attribute.Text;
     privacyUrl: Attribute.Text;
+    plan: Attribute.Component<'elements.plan', true>;
+    billingTypeMonthly: Attribute.String;
+    billingTypeYearly: Attribute.String;
+    subscriptionDuration: Attribute.Component<'elements.subscription-duration', true>;
+    hintText: Attribute.String;
+    toggleText: Attribute.String;
+    priceTitle: Attribute.String;
+    priceDescription: Attribute.Text;
+    pricePlan: Attribute.String;
+    billingType: Attribute.String;
   };
 }
 
@@ -584,6 +616,7 @@ declare module '@strapi/types' {
       'elements.menu-items': ElementsMenuItems;
       'elements.partner-features-list': ElementsPartnerFeaturesList;
       'elements.partner-steps': ElementsPartnerSteps;
+      'elements.plan': ElementsPlan;
       'elements.pricing-plan': ElementsPricingPlan;
       'elements.pricing-tabs': ElementsPricingTabs;
       'elements.resource-supporting-text': ElementsResourceSupportingText;
@@ -591,6 +624,7 @@ declare module '@strapi/types' {
       'elements.resources': ElementsResources;
       'elements.salesboard-section': ElementsSalesboardSection;
       'elements.sub-menu-items': ElementsSubMenuItems;
+      'elements.subscription-duration': ElementsSubscriptionDuration;
       'elements.subscription-form': ElementsSubscriptionForm;
       'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
