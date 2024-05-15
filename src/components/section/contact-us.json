@@ -49,7 +49,7 @@
     "hintText": {
       "type": "string"
     },
-    "toggleText": {
+    "toggleTextMonthly": {
       "type": "string"
     },
     "priceTitle": {
@@ -61,7 +61,13 @@
     "pricePlan": {
       "type": "string"
     },
-    "billingType": {
+    "toggleTextYearly": {
+      "type": "string"
+    },
+    "billingTypeTextMonthly": {
+      "type": "string"
+    },
+    "billingTypeTextYearly": {
       "type": "string"
     }
   }

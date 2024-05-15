@@ -363,11 +363,13 @@ export interface SectionContactUs extends Schema.Component {
     billingTypeYearly: Attribute.String;
     subscriptionDuration: Attribute.Component<'elements.subscription-duration', true>;
     hintText: Attribute.String;
-    toggleText: Attribute.String;
+    toggleTextMonthly: Attribute.String;
     priceTitle: Attribute.String;
     priceDescription: Attribute.Text;
     pricePlan: Attribute.String;
-    billingType: Attribute.String;
+    toggleTextYearly: Attribute.String;
+    billingTypeTextMonthly: Attribute.String;
+    billingTypeTextYearly: Attribute.String;
   };
 }
 
