@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_blog_entry_sections",
+  "info": {
+    "displayName": "Blog Entry Section",
+    "icon": "search",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "emailCapture": {
+      "displayName": "Email Capture",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.email-capture"
+    }
+  }
+}

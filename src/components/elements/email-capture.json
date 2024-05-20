@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_email_captures",
+  "info": {
+    "displayName": "Email Capture",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "emailPlaceholder": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button"
+    },
+    "privacyPolicyText": {
+      "type": "text"
+    },
+    "privacyPolicyLink": {
+      "type": "text"
+    },
+    "privacyPolicyUrl": {
+      "type": "text"
+    },
+    "thankYouText": {
+      "type": "string"
+    }
+  }
+}

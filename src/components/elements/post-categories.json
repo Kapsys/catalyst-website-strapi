@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_post_categories",
+  "info": {
+    "displayName": "Post Categories",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "Category": {
+      "type": "string"
+    }
+  }
+}

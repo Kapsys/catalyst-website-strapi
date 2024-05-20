@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_blog_sections",
+  "info": {
+    "displayName": "Blog Section",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "searchPlaceholder": {
+      "type": "string"
+    },
+    "postCategories": {
+      "displayName": "Post Categories",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.post-categories"
+    }
+  }
+}

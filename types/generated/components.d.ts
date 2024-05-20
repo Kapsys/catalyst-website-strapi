@@ -32,6 +32,23 @@ export interface ElementsContent extends Schema.Component {
   };
 }
 
+export interface ElementsEmailCapture extends Schema.Component {
+  collectionName: 'components_elements_email_captures';
+  info: {
+    displayName: 'Email Capture';
+    icon: 'envelop';
+    description: '';
+  };
+  attributes: {
+    emailPlaceholder: Attribute.String;
+    button: Attribute.Component<'elements.button'>;
+    privacyPolicyText: Attribute.Text;
+    privacyPolicyLink: Attribute.Text;
+    privacyPolicyUrl: Attribute.Text;
+    thankYouText: Attribute.String;
+  };
+}
+
 export interface ElementsFaq extends Schema.Component {
   collectionName: 'components_elements_faqs';
   info: {
@@ -184,6 +201,17 @@ export interface ElementsPlan extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
+  };
+}
+
+export interface ElementsPostCategories extends Schema.Component {
+  collectionName: 'components_elements_post_categories';
+  info: {
+    displayName: 'Post Categories';
+    icon: 'command';
+  };
+  attributes: {
+    Category: Attribute.String;
   };
 }
 
@@ -340,6 +368,33 @@ export interface GlobalHeader extends Schema.Component {
     languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
     button: Attribute.Component<'elements.button'>;
     languageNotification: Attribute.Component<'elements.language-notification', true>;
+  };
+}
+
+export interface SectionBlogEntrySection extends Schema.Component {
+  collectionName: 'components_section_blog_entry_sections';
+  info: {
+    displayName: 'Blog Entry Section';
+    icon: 'search';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+    emailCapture: Attribute.Component<'elements.email-capture'>;
+  };
+}
+
+export interface SectionBlogSection extends Schema.Component {
+  collectionName: 'components_section_blog_sections';
+  info: {
+    displayName: 'Blog Section';
+    icon: 'server';
+  };
+  attributes: {
+    searchPlaceholder: Attribute.String;
+    postCategories: Attribute.Component<'elements.post-categories', true>;
   };
 }
 
@@ -607,6 +662,7 @@ declare module '@strapi/types' {
     export interface Components {
       'elements.button': ElementsButton;
       'elements.content': ElementsContent;
+      'elements.email-capture': ElementsEmailCapture;
       'elements.faq': ElementsFaq;
       'elements.feature-elements': ElementsFeatureElements;
       'elements.features-list': ElementsFeaturesList;
@@ -619,6 +675,7 @@ declare module '@strapi/types' {
       'elements.partner-features-list': ElementsPartnerFeaturesList;
       'elements.partner-steps': ElementsPartnerSteps;
       'elements.plan': ElementsPlan;
+      'elements.post-categories': ElementsPostCategories;
       'elements.pricing-plan': ElementsPricingPlan;
       'elements.pricing-tabs': ElementsPricingTabs;
       'elements.resource-supporting-text': ElementsResourceSupportingText;
@@ -630,6 +687,8 @@ declare module '@strapi/types' {
       'elements.subscription-form': ElementsSubscriptionForm;
       'elements.testimonials': ElementsTestimonials;
       'global.header': GlobalHeader;
+      'section.blog-entry-section': SectionBlogEntrySection;
+      'section.blog-section': SectionBlogSection;
       'section.contact-us': SectionContactUs;
       'section.cta-section': SectionCtaSection;
       'section.entry-pricing-section': SectionEntryPricingSection;
