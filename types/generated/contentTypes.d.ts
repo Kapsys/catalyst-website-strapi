@@ -916,6 +916,29 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAuthorAuthor extends Schema.CollectionType {
+  collectionName: 'authors';
+  info: {
+    singularName: 'author';
+    pluralName: 'authors';
+    displayName: 'Author';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    authorName: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::author.author', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::author.author', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiCategoryCategory extends Schema.CollectionType {
   collectionName: 'categories';
   info: {
@@ -1284,6 +1307,7 @@ export interface ApiPostPost extends Schema.CollectionType {
         };
       }>;
     postCategory: Attribute.Relation<'api::post.post', 'oneToMany', 'api::category.category'>;
+    author: Attribute.Relation<'api::post.post', 'oneToOne', 'api::author.author'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1319,6 +1343,7 @@ declare module '@strapi/types' {
       'plugin::sitemap.sitemap': PluginSitemapSitemap;
       'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::form.form': ApiFormForm;

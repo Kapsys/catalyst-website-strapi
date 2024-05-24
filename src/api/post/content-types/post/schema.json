@@ -124,6 +124,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
     }
   }
 }
