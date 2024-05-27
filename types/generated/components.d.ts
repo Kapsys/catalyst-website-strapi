@@ -49,6 +49,19 @@ export interface ElementsEmailCapture extends Schema.Component {
   };
 }
 
+export interface ElementsEmptyStates extends Schema.Component {
+  collectionName: 'components_elements_empty_states';
+  info: {
+    displayName: 'Empty States';
+    icon: 'globe';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'elements.button'>;
+  };
+}
+
 export interface ElementsFaq extends Schema.Component {
   collectionName: 'components_elements_faqs';
   info: {
@@ -391,10 +404,12 @@ export interface SectionBlogSection extends Schema.Component {
   info: {
     displayName: 'Blog Section';
     icon: 'server';
+    description: '';
   };
   attributes: {
     searchPlaceholder: Attribute.String;
     postCategories: Attribute.Component<'elements.post-categories', true>;
+    emptyStates: Attribute.Component<'elements.empty-states', true>;
   };
 }
 
@@ -663,6 +678,7 @@ declare module '@strapi/types' {
       'elements.button': ElementsButton;
       'elements.content': ElementsContent;
       'elements.email-capture': ElementsEmailCapture;
+      'elements.empty-states': ElementsEmptyStates;
       'elements.faq': ElementsFaq;
       'elements.feature-elements': ElementsFeatureElements;
       'elements.features-list': ElementsFeaturesList;
