@@ -922,6 +922,7 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
     singularName: 'author';
     pluralName: 'authors';
     displayName: 'Author';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1155,6 +1156,31 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
 }
 
+export interface ApiOtherPostOtherPost extends Schema.SingleType {
+  collectionName: 'other_posts';
+  info: {
+    singularName: 'other-post';
+    pluralName: 'other-posts';
+    displayName: 'Other Post ';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    otherPostTitle: Attribute.String;
+    button: Attribute.Component<'elements.button'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::other-post.other-post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::other-post.other-post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1348,6 +1374,7 @@ declare module '@strapi/types' {
       'api::faq-section.faq-section': ApiFaqSectionFaqSection;
       'api::form.form': ApiFormForm;
       'api::global.global': ApiGlobalGlobal;
+      'api::other-post.other-post': ApiOtherPostOtherPost;
       'api::page.page': ApiPagePage;
       'api::post.post': ApiPostPost;
     }
