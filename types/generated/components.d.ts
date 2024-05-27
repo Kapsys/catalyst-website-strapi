@@ -54,11 +54,13 @@ export interface ElementsEmptyStates extends Schema.Component {
   info: {
     displayName: 'Empty States';
     icon: 'globe';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'elements.button'>;
+    icon: Attribute.Media;
   };
 }
 
