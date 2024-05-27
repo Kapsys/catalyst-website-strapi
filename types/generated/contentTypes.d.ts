@@ -1167,9 +1167,24 @@ export interface ApiOtherPostOtherPost extends Schema.SingleType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    otherPostTitle: Attribute.String;
-    button: Attribute.Component<'elements.button'>;
+    otherPostTitle: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button: Attribute.Component<'elements.button'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1178,6 +1193,12 @@ export interface ApiOtherPostOtherPost extends Schema.SingleType {
     updatedBy: Attribute.Relation<'api::other-post.other-post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+    localizations: Attribute.Relation<
+      'api::other-post.other-post',
+      'oneToMany',
+      'api::other-post.other-post'
+    >;
+    locale: Attribute.String;
   };
 }
 
