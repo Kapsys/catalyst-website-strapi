@@ -5,10 +5,12 @@ export interface ElementsButton extends Schema.Component {
   info: {
     displayName: 'Button';
     icon: 'filter';
+    description: '';
   };
   attributes: {
     buttonName: Attribute.String;
     buttonLink: Attribute.String;
+    buttonId: Attribute.String;
   };
 }
 
@@ -60,7 +62,7 @@ export interface ElementsEmptyStates extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'elements.button'>;
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -83,11 +85,11 @@ export interface ElementsFeatureElements extends Schema.Component {
     icon: 'information';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'elements.button'>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -98,7 +100,7 @@ export interface ElementsFeaturesList extends Schema.Component {
     icon: 'repeat';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     featureTitle: Attribute.String;
   };
 }
@@ -135,7 +137,7 @@ export interface ElementsItems extends Schema.Component {
     icon: 'server';
   };
   attributes: {
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     shortTitle: Attribute.String;
     hoverTitle: Attribute.String;
     hoverDescription: Attribute.String;
@@ -189,7 +191,7 @@ export interface ElementsPartnerFeaturesList extends Schema.Component {
     icon: 'bulletList';
   };
   attributes: {
-    icon: Attribute.Media;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     partnerFeatureTitle: Attribute.String;
     partnerFeatureDescription: Attribute.Text;
   };
@@ -238,7 +240,7 @@ export interface ElementsPricingPlan extends Schema.Component {
     description: '';
   };
   attributes: {
-    pricingIcon: Attribute.Media;
+    pricingIcon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     pricingChoicePlan: Attribute.String;
     monthlyPrice: Attribute.String;
     yearlyPrice: Attribute.String;
@@ -271,7 +273,7 @@ export interface ElementsResourceSupportingText extends Schema.Component {
     description: '';
   };
   attributes: {
-    logoText: Attribute.Media;
+    logoText: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     monthlytext: Attribute.String;
     yearlytext: Attribute.String;
   };
@@ -312,8 +314,8 @@ export interface ElementsSalesboardSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    image: Attribute.Media;
-    mobileImage: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mobileImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subtitle: Attribute.String;
   };
 }
@@ -364,10 +366,10 @@ export interface ElementsTestimonials extends Schema.Component {
   };
   attributes: {
     description: Attribute.Text;
-    personPhoto: Attribute.Media;
+    personPhoto: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Attribute.String;
     position: Attribute.String;
-    logo: Attribute.Media;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -378,7 +380,7 @@ export interface GlobalHeader extends Schema.Component {
     description: '';
   };
   attributes: {
-    headerlogo: Attribute.Media;
+    headerlogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     menuItems: Attribute.Component<'elements.menu-items', true>;
     languagesSwitcher: Attribute.Component<'elements.languages-switcher', true>;
     button: Attribute.Component<'elements.button'>;
@@ -513,13 +515,13 @@ export interface SectionFooter extends Schema.Component {
     icon: 'database';
   };
   attributes: {
-    footerLogo: Attribute.Media;
+    footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     description: Attribute.Text;
     footerItems: Attribute.Component<'elements.footer-items', true>;
     copyrightText: Attribute.String;
     beforeLogoText: Attribute.String;
     logoUrl: Attribute.String;
-    copyrightLogo: Attribute.Media;
+    copyrightLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     footerMenuItems: Attribute.Component<'elements.footer-menu-items', true>;
     button: Attribute.Component<'elements.button'>;
   };
@@ -536,7 +538,7 @@ export interface SectionHeroSection extends Schema.Component {
     subtitle: Attribute.String;
     title: Attribute.Text;
     description: Attribute.Text;
-    backgroundImage: Attribute.Media;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     button: Attribute.Component<'elements.button'>;
   };
 }
@@ -641,7 +643,7 @@ export interface SharedMetaSocial extends Schema.Component {
       Attribute.SetMinMaxLength<{
         maxLength: 65;
       }>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos'>;
   };
 }
 
@@ -664,7 +666,7 @@ export interface SharedSeo extends Schema.Component {
         minLength: 50;
         maxLength: 500;
       }>;
-    metaImage: Attribute.Media & Attribute.Required;
+    metaImage: Attribute.Media<'images' | 'files' | 'videos'> & Attribute.Required;
     metaSocial: Attribute.Component<'shared.meta-social', true>;
     keywords: Attribute.Text;
     metaRobots: Attribute.String;
